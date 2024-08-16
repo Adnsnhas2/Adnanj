@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function getMACAddress() {
+  // Get the network interfaces.
+  var networkInterfaces = navigator.networkInterfaces;
+  
+  // Loop through the network interfaces.
+  for (var key in networkInterfaces) {
+    // Get the MAC address for the interface.
+    var macAddress = networkInterfaces[key][0].mac;
+    
+    // Return the MAC address.
+    return macAddress;
+  }
+}
+
+// Get the MAC address.
+var macAddress = getMACAddress();
+
+// Display the MAC address.
+document.write("Your MAC address is: " + macAddress);
+</script>
+
+</body>
+</html>
